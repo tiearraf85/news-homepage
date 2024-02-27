@@ -1,0 +1,248 @@
+:root {
+    --offwhite: hsl(36, 100%, 99%);
+    --grayishblue: hsl(233, 8%, 79%);
+    --Darkgrayishblue: hsl(236, 13%, 42%);
+    --verydarkblue: hsl(240, 100%, 5%);
+    --softorange: hsl(35, 77%, 62%);
+    --softred: hsl(5, 85%, 63%);
+}
+@font-face {
+    font-family: "Inter";
+    src: url(./assets/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+main{
+    font-family: "Inter";
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                          "img img article"
+                          "bright alter article" 
+                          "retro key gaming"
+                           ; 
+    gap: 2rem; 
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--offwhite);
+}
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    
+} 
+
+.top a {
+    display: flex;
+    flex-wrap: wrap;
+    color:var(--verydarkblue);
+    text-decoration: none;
+    
+}
+.hamburger-menu {
+    display: none; 
+}
+
+.desk {
+    grid-area: img;
+}
+img{  
+    max-width: 100%;
+} 
+article{ 
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: article;
+    color: var(--offwhite);
+    background-color:var(--verydarkblue);
+}
+
+.fact{
+    margin-left: 3rem;
+    margin-right: 5rem;
+
+    
+}
+
+
+a:hover{
+  color:var(--softred);
+}
+.yells{
+    color: var(--softorange);
+}
+
+ 
+.bright{
+    margin-top: 0;
+    grid-area: bright;
+    color:var(--verydarkblue);
+    font-weight: 800;
+    font-size: 3rem;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 20rem;
+
+
+
+}  
+
+h4{ 
+    margin-bottom: 0;
+}
+
+.divider{ 
+    border-bottom: 1px solid var(--grayishblue);
+    position: relative;
+    color: var(--Darkgrayishblue);
+    
+}
+h4:hover{
+    color: var(--softorange);
+}
+
+.alter{
+    grid-area: alter;
+    color: var(--verydarkblue);
+ 
+
+}
+
+button{
+    letter-spacing: 1ch;
+    color: var(--offwhite);
+    background-color: var(--softred);
+    border-color: var(--softred);
+    padding: .8rem 1rem 1rem 1rem;
+}
+
+button:hover{
+    background-color: var(--verydarkblue);
+    border-color: var(--verydarkblue);
+    
+}
+
+h1{
+    color: var(--offwhite);
+}
+
+h5{
+    font-weight: 800;
+    font-size: 1rem;
+    
+    
+    
+}
+
+p{
+    color:var(--Darkgrayishblue);
+
+    
+}
+
+.retro{
+    grid-area: retro;
+    display: flex;
+    gap: 1rem;
+    
+    
+}
+
+.key{
+    grid-area: key;
+    display: flex;
+    gap: 1rem;
+}
+
+.gaming{
+    grid-area: gaming;
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.close{
+    max-width: 25%;
+    max-height: 11rem; 
+}
+
+@media( max-width: 1440px){
+   main{ 
+    grid-template-areas: "nav"
+                         "img"
+                 "bright" 
+                 "article" 
+                     "alter"
+                      "retro" 
+                     "key" 
+                     "gaming"
+     ; 
+   }   
+  
+
+}
+
+@media(max-width: 375px){
+
+  
+      
+
+
+    .hamburger-menu {  
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: var(--black);
+    } 
+    .hamburger-menu:hover{
+        color:var(--red);
+    }
+    .top{
+        display: none;
+    }
+
+    nav{
+        grid-area: nav;
+    }
+    img{
+        grid-area: img;
+
+    }
+
+    .desk{ 
+        content: url("./assets/images/image-web-3-mobile.jpg");
+    } 
+    
+    .bright{
+        grid-area: bright;
+        margin: 0;
+        font-size: 2.5rem;
+    }   
+    
+    .retro{
+        grid-area: retro;
+    }
+    .alter{
+        grid-area: alter;
+        margin: 0;
+    }
+    article{
+        grid-area: article;
+    }
+
+    .key{
+        grid-area: key;
+    }
+
+    .gaming{
+        grid-area: gaming;
+    }
+}
