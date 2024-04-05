@@ -8,7 +8,10 @@
 }
 @font-face {
     font-family: "Inter";
-    src: url(./assets/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    src: url(./assets/fonts/Inter-ExtraBold.ttf);
+    src: url(./assets/fonts/Inter-Regular.ttf);
+    src: url(./assets/fonts/Inter-Bold.ttf);
 }
 
 main{
@@ -53,6 +56,10 @@ nav{
 
 .desk {
     grid-area: img;
+}
+
+.mobile{
+    display: none;
 }
 img{  
     max-width: 100%;
@@ -174,7 +181,7 @@ p{
     max-height: 11rem; 
 }
 
-@media( max-width: 1440px){
+@media( max-width: 685px){
    main{ 
     grid-template-areas: "nav"
                          "img"
@@ -186,40 +193,36 @@ p{
                      "gaming"
      ; 
    }   
-  
+   
+.hamburger-menu {  
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: var(--black);
+} 
+.hamburger-menu:hover{
+    color:var(--red);
+}
+.top{
+    display: none;
+}
 
 }
 
 @media(max-width: 375px){
 
-  
-      
-
-
-    .hamburger-menu {  
-        display: block;
-        width: 30px;
-        height: 30px;
-        color: var(--black);
-    } 
-    .hamburger-menu:hover{
-        color:var(--red);
-    }
-    .top{
-        display: none;
-    }
-
-    nav{
+  nav{
         grid-area: nav;
     }
     img{
         grid-area: img;
-
     }
+ 
 
-    .desk{ 
+
+    .desk-img{ 
         content: url("./assets/images/image-web-3-mobile.jpg");
-    } 
+    }  
     
     .bright{
         grid-area: bright;
